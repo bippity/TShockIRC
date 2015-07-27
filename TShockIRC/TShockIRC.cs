@@ -99,7 +99,7 @@ namespace TShockIRC
 			TSPlayer tsPlr = TShock.Players[e.Who];
 			if (!IrcClient.IsConnected)
 				Connect();
-			else if (e.Text != null && !e.Text.StartsWith(TShock.Config.CommandSpecifier) && tsPlr != null &&
+			else if (e.Text != null && !e.Text.StartsWith(TShock.Config.CommandSpecifier) && !e.Text.StartsWith(TShock.Config.CommandSilentSpecifier) && tsPlr != null &&
 				!tsPlr.mute && tsPlr.Group.HasPermission(Permissions.canchat) && !String.IsNullOrEmpty(Config.ServerChatMessageFormat) &&
 				!Config.IgnoredServerChatRegexes.Any(s => Regex.IsMatch(e.Text, s)))
 			{
