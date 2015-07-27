@@ -18,14 +18,14 @@ namespace TShockIRC
 		{
 			Group = group;
 			Target = target;
-			UserAccountName = name;
+			User.Name = name;
 		}
 
-		[Obsolete]
+		/*[Obsolete]
 		public override void SendMessage(string msg)
 		{
 			TShockIRC.SendMessage(Target, msg);
-		}
+		}*/
 		public override void SendMessage(string msg, Color color)
 		{
 			TShockIRC.SendMessage(Target, msg);

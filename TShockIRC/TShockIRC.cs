@@ -16,7 +16,7 @@ using Group = TShockAPI.Group;
 
 namespace TShockIRC
 {
-	[ApiVersion(1, 16)]
+	[ApiVersion(1, 20)]
 	public class TShockIRC : TerrariaPlugin
 	{
 		#region TerrariaPlugin implementation
@@ -166,7 +166,7 @@ namespace TShockIRC
 			if (!IrcClient.IsConnected)
 				Connect();
 			else if (!String.IsNullOrEmpty(Config.ServerLoginAdminMessageFormat))
-				SendMessage(Config.AdminChannel, String.Format(Config.ServerLoginAdminMessageFormat, e.Player.Name, e.Player.UserAccountName, e.Player.IP));
+				SendMessage(Config.AdminChannel, String.Format(Config.ServerLoginAdminMessageFormat, e.Player.Name, e.Player.User.Name, e.Player.IP));
 		}
 
 		#region Commands
