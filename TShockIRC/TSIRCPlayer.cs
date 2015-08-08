@@ -18,7 +18,7 @@ namespace TShockIRC
 		{
 			Group = group;
 			Target = target;
-			//User.Name = name; //Removing User.Name fixes it?
+            User = TShock.Users.GetUserByName(name); //Not sure if this is the correct way
 		}
 
 		/*[Obsolete]
