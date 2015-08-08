@@ -23,7 +23,7 @@ namespace TShockIRC
 
 			var ircCommand = Commands.FirstOrDefault(c => c.Names.Contains(commandName));
 			var senderGroup = TShockIRC.IrcUsers[sender];
-			if (ircCommand != null)
+			if (ircCommand != null) //if irc command (who/login/logout)
 			{
 				if (String.IsNullOrEmpty(ircCommand.Permission) || senderGroup.HasPermission(ircCommand.Permission))
 				{
@@ -39,7 +39,7 @@ namespace TShockIRC
 			}
 			else if (senderGroup.HasPermission("tshockirc.command"))
 			{
-				var tsIrcPlayer = new TSIrcPlayer(sender.NickName, senderGroup, target);
+				var tsIrcPlayer = new TSIrcPlayer(sender.NickName, senderGroup, target); //stuck here
 				var commands = TShockAPI.Commands.ChatCommands.Where(c => c.HasAlias(commandName));
 
 				if (commands.Count() != 0)
