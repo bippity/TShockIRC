@@ -16,7 +16,7 @@ using Group = TShockAPI.Group;
 
 namespace TShockIRC
 {
-	[ApiVersion(1, 21)]
+	[ApiVersion(1, 22)]
 	public class TShockIRC : TerrariaPlugin
 	{
 		#region TerrariaPlugin implementation
