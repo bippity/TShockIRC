@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Microsoft.Xna.Framework;
 using IrcDotNet;
 using IrcDotNet.Ctcp;
 using Newtonsoft.Json;
@@ -16,7 +17,7 @@ using Group = TShockAPI.Group;
 
 namespace TShockIRC
 {
-	[ApiVersion(1, 22)]
+	[ApiVersion(2, 0)]
 	public class TShockIRC : TerrariaPlugin
 	{
 		#region TerrariaPlugin implementation

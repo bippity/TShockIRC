@@ -44,8 +44,8 @@ namespace TShockIRC
 
 				if (commands.Count() != 0)
 				{
-					Main.rand = new Random();
-					WorldGen.genRand = new Random();
+					//Main.rand = new Random(); //Not working in Mintaka update/API 2.0
+					//WorldGen.genRand = new Random();
 					foreach (Command command in commands)
 					{
 						if (!command.CanRun(tsIrcPlayer))
