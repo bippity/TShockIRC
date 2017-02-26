@@ -100,7 +100,6 @@ namespace TShockIRC
 			TSPlayer tsPlr = TShock.Players[e.Who];
             if (!IrcClient.IsConnected)
             {
-                TShock.Log.ConsoleInfo("WOOP WOOP");
                 Connect();
             }
             else if (e.Text != null && !e.Text.StartsWith(TShock.Config.CommandSpecifier) && !e.Text.StartsWith(TShock.Config.CommandSilentSpecifier) && tsPlr != null &&

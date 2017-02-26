@@ -44,7 +44,7 @@ namespace TShockIRC
 
 				if (commands.Count() != 0)
 				{
-					//Main.rand = new Random(); //Not working in Mintaka update/API 2.0
+					Main.rand = new Terraria.Utilities.UnifiedRandom();
 					//WorldGen.genRand = new Random();
 					foreach (Command command in commands)
 					{
